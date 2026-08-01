@@ -3,16 +3,589 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saffron Kettle</title>
+
+    <title>Saffron Kettle | Authentic Indian Cuisine</title>
+
+    <meta name="description"
+          content="Saffron Kettle — authentic Indian cuisine made with heart. Homemade Indian food, catering and special orders in Helsingborg.">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #3b2418;
+            background: #fffaf3;
+            line-height: 1.6;
+        }
+
+        /* ---------------- NAVIGATION ---------------- */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 7%;
+
+            background: rgba(255, 250, 243, 0.96);
+            border-bottom: 1px solid #ead8c2;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #8b2f23;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #3b2418;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #b45f28;
+        }
+
+        /* ---------------- HERO ---------------- */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 120px 20px 80px;
+
+            background:
+                radial-gradient(circle at 20% 30%, #f7d9a8 0, transparent 25%),
+                radial-gradient(circle at 80% 70%, #e9b88e 0, transparent 28%),
+                linear-gradient(135deg, #fffaf3, #f8ead7);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-kicker {
+            font-size: 18px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #b45f28;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 9vw, 105px);
+            line-height: 1;
+            color: #8b2f23;
+            margin-bottom: 25px;
+        }
+
+        .hero h2 {
+            font-size: clamp(24px, 4vw, 38px);
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto 35px;
+            font-size: 19px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 30px;
+            margin: 6px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            background: #8b2f23;
+            color: white;
+
+            transition: 0.25s;
+        }
+
+        .button:hover {
+            background: #b45f28;
+            transform: translateY(-2px);
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: #8b2f23;
+            border: 2px solid #8b2f23;
+        }
+
+        /* ---------------- SECTIONS ---------------- */
+
+        section {
+            padding: 90px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            color: #8b2f23;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: #6b5142;
+        }
+
+        /* ---------------- ABOUT ---------------- */
+
+        .about {
+            background: #fff;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 30px;
+            color: #8b2f23;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+            font-size: 17px;
+        }
+
+        .about-card {
+            min-height: 350px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(135deg, #8b2f23, #b45f28);
+
+            color: white;
+
+            text-align: center;
+            padding: 40px;
+
+            box-shadow: 0 15px 35px rgba(80, 40, 20, 0.15);
+        }
+
+        .about-card .big-text {
+            font-size: 55px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* ---------------- FOOD ---------------- */
+
+        .food {
+            background: #f8ead7;
+        }
+
+        .food-grid {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .food-card {
+            background: white;
+            padding: 35px 25px;
+            text-align: center;
+
+            border-radius: 15px;
+
+            box-shadow: 0 8px 20px rgba(80, 40, 20, 0.08);
+        }
+
+        .food-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .food-card h3 {
+            font-size: 24px;
+            color: #8b2f23;
+            margin-bottom: 10px;
+        }
+
+        /* ---------------- CONTACT ---------------- */
+
+        .contact {
+            background: #fff;
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-box p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* ---------------- FOOTER ---------------- */
+
+        footer {
+            background: #3b2418;
+            color: #f8ead7;
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+        footer .footer-logo {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* ---------------- MOBILE ---------------- */
+
+        @media (max-width: 750px) {
+
+            nav {
+                padding: 15px 20px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            nav ul {
+                gap: 12px;
+                font-size: 14px;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .food-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 70px 20px;
+            }
+
+            .hero h1 {
+                font-size: 60px;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-<h1>Welcome to Saffron Kettle</h1>
+<!-- NAVIGATION -->
 
-<p>
-Authentic Indian cuisine made with heart.
-</p>
+<nav>
+
+    <div class="logo">
+        Saffron Kettle
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#food">Food</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-kicker">
+            Homemade • Authentic • Indian
+        </div>
+
+        <h1>
+            Saffron Kettle
+        </h1>
+
+        <h2>
+            Authentic Indian cuisine made with heart.
+        </h2>
+
+        <p>
+            Discover the warmth, aroma and richness of Indian food —
+            lovingly prepared and served with pride.
+        </p>
+
+        <a href="#food" class="button">
+            Explore Our Food
+        </a>
+
+        <a href="#contact" class="button secondary">
+            Get in Touch
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="section-title">
+
+        <h2>Our Story</h2>
+
+        <p>
+            Food that feels like home.
+        </p>
+
+    </div>
+
+
+    <div class="about-container">
+
+        <div class="about-text">
+
+            <h3>
+                More than just Indian food.
+            </h3>
+
+            <p>
+                At Saffron Kettle, we believe great food is about more
+                than recipes. It is about memories, family, tradition
+                and the joy of sharing a meal.
+            </p>
+
+            <p>
+                We bring the flavours of India to Helsingborg,
+                combining traditional recipes with fresh ingredients
+                and plenty of heart.
+            </p>
+
+            <p>
+                From comforting classics to special dishes inspired
+                by India's diverse culinary traditions, every dish
+                is prepared with care.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <div>
+
+                <div class="big-text">
+                    ♥
+                </div>
+
+                <h3>
+                    Made with Heart.
+                </h3>
+
+                <p>
+                    Served with Pride.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOD -->
+
+<section class="food" id="food">
+
+    <div class="section-title">
+
+        <h2>Flavours of India</h2>
+
+        <p>
+            A taste of India's rich and diverse culinary traditions.
+        </p>
+
+    </div>
+
+
+    <div class="food-grid">
+
+        <div class="food-card">
+
+            <div class="food-icon">
+                🍛
+            </div>
+
+            <h3>
+                Curries
+            </h3>
+
+            <p>
+                Rich, aromatic and comforting dishes inspired by
+                India's many regional cuisines.
+            </p>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <div class="food-icon">
+                🍚
+            </div>
+
+            <h3>
+                Rice & Biryani
+            </h3>
+
+            <p>
+                Fragrant rice dishes layered with spices, herbs
+                and delicious flavours.
+            </p>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <div class="food-icon">
+                🫓
+            </div>
+
+            <h3>
+                Breads & Sides
+            </h3>
+
+            <p>
+                Delicious accompaniments that bring every Indian
+                meal together.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+
+        <h2>Let's Talk Food</h2>
+
+        <p>
+            Interested in ordering, catering or simply learning
+            more about Saffron Kettle?
+        </p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <p>
+            📍 Helsingborg, Sweden
+        </p>
+
+        <p>
+            We are currently preparing our menu and ordering options.
+        </p>
+
+        <a href="mailto:hello@saffronkettle.com" class="button">
+            Contact Saffron Kettle
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        Saffron Kettle
+    </div>
+
+    <p>
+        Authentic Indian cuisine made with heart.
+    </p>
+
+    <p>
+        © 2026 Saffron Kettle. All rights reserved.
+    </p>
+
+</footer>
+
 
 </body>
 </html>
