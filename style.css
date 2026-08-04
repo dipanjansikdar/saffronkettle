@@ -419,6 +419,7 @@ button {
   font-size: 20px !important;
 }
 
+
 /* =========================================================
    WHAT WE SERVE
 ========================================================= */
@@ -1069,25 +1070,24 @@ button {
 ========================================================= */
 
 .story-beats {
-  margin: 28px auto 0;
-  padding-left: 22px;
+  margin: 28px 0 0;
+  padding-left: 18px;
   border-left: 2px solid var(--gold);
-  width: min(100%, 390px);
+  width: 100%;
   text-align: left;
 }
 
 .story-beats div {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(24px, 3vw, 34px);
-  line-height: 1.3;
+  font-size: clamp(18px, 1.8vw, 21px);
+  line-height: 1.45;
   font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 3px;
+  color: var(--text-dark);
+  margin: 0;
 }
 
-.story-beats div:last-child {
+.story-beats span {
   color: var(--gold-dark);
-  margin-bottom: 0;
 }
 
 .story-visual > h4 {
