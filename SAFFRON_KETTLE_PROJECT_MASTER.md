@@ -10,7 +10,7 @@
 
 # CURRENT STATE
 
-**Last updated:** 2026-08-03
+**Last updated:** 2026-08-04
 
 ## Completed
 - [x] Domain
@@ -19,18 +19,40 @@
 - [x] Logo placement
 - [x] Hero
 - [x] Our Story
-- [x] What We Serve
+- [x] V1.0 baseline locked in GitHub
+- [x] V1.1 Our Story refinement locked in GitHub
 
 ## Current task
-- [ ] Why Saffron Kettle
+- [ ] What We Serve
 
 ## Next
+- [ ] Why Saffron Kettle
 - [ ] Featured Food / Menu
 - [ ] Contact / Order
 - [ ] Footer
 - [ ] Full mobile optimization
 - [ ] Final testing
 - [ ] Final deployment check
+
+## Version Baselines
+
+- **V1.0** — Initial approved website baseline.
+- **V1.1** — Approved refinement of the Our Story section; current stable baseline.
+
+### V1.1 Our Story — LOCKED
+
+Approved story identity:
+
+> Rooted in Bengal.
+> Shaped by India.
+> Inspired by discovery.
+> Conceived in Sudipta’s Kitchen.
+
+Approved continuation:
+
+> And that is only the beginning.
+
+The stacked presentation and compact typography are part of the approved V1.1 treatment. Do not change the Our Story wording, hierarchy, or layout without explicit approval.
 
 ## Locked
 - Black + gold visual direction
