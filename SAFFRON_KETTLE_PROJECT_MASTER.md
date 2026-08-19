@@ -10,8 +10,6 @@
 
 # CURRENT STATE
 
-**Last updated:** 2026-08-04
-
 ## Completed
 - [x] Domain
 - [x] GitHub setup
@@ -19,20 +17,44 @@
 - [x] Logo placement
 - [x] Hero
 - [x] Our Story
+- [x] What We Serve
+- [x] Why Saffron Kettle
 - [x] V1.0 baseline locked in GitHub
 - [x] V1.1 Our Story refinement locked in GitHub
+- [x] Current visual baseline — Revision 6
 
 ## Current task
-- [ ] What We Serve
+- [ ] Featured Food / Menu
 
 ## Next
-- [ ] Why Saffron Kettle
-- [ ] Featured Food / Menu
 - [ ] Contact / Order
 - [ ] Footer
 - [ ] Full mobile optimization
 - [ ] Final testing
 - [ ] Final deployment check
+
+## Current website section structure
+
+1. **Hero** — dark
+2. **Our Story** — cream
+3. **What We Serve** — dark
+4. **Why Saffron Kettle + Discovery** — cream, treated as one section
+5. **Featured Food** — dark
+6. **Contact / Order** — cream
+7. **Footer** — dark
+
+## Current design baseline
+
+Revision 6 is the current workable visual baseline.
+
+The following are established:
+- Consistent section-label typography
+- Compact section spacing intended to keep each major section roughly within one scroll window
+- Consistent card language between What We Serve and Why Saffron Kettle
+- Shared card border, padding, hover lift, hover border and typography
+- No numbering or underline treatment on the Why Saffron Kettle pillars
+- Approved short Why Saffron Kettle introduction:
+  > Indian food has a bigger story to tell — beyond the familiar.
 
 ## Version Baselines
 
@@ -206,9 +228,9 @@ The current approved version should not be changed unless explicitly requested.
 
 ---
 
-# 7. WHAT WE SERVE — CURRENT WORK
+# 7. WHAT WE SERVE — LOCKED
 
-This section has **not yet been fully coded**.
+The What We Serve section has now been completed and approved.
 
 ## Important content decision
 
@@ -218,40 +240,51 @@ Do **not** describe the food simply as:
 
 We specifically decided against limiting the brand that way because Indian cuisine is much broader and there are many regional and culinary traditions that should eventually be represented.
 
-## Desired positioning
+## Approved positioning
 
-The section should communicate that Saffron Kettle offers a broad selection of Indian food inspired by different regions, traditions and styles.
+The section communicates that Saffron Kettle offers a broad selection of Indian food inspired by different regions, traditions and styles.
 
-The wording should feel inclusive rather than creating a rigid regional classification.
+The wording remains inclusive rather than creating a rigid regional classification.
 
-## Current status
+**Status: LOCKED**
 
-**CONTENT DIRECTION AGREED**
+Do not change the approved What We Serve content, hierarchy, or design without explicit approval.
 
-**CODE NOT YET COMPLETED**
+# 8. WHY SAFFRON KETTLE — LOCKED
 
----
-
-# 8. WHY SAFFRON KETTLE
-
-Planned section.
+The Why Saffron Kettle section has now been completed and approved.
 
 ## Purpose
 
 Explain what differentiates Saffron Kettle from ordinary restaurant/takeaway food.
 
-Potential themes:
-- Made with care
-- Authentic flavours
-- Quality ingredients
-- Homemade character
-- Attention to detail
-- Small-batch preparation
-- Food made with pride
+## Approved pillars
 
-Exact copy and design are **not yet locked**.
+The section uses three pillars:
 
----
+- **Beyond the Familiar**
+- **Made with Love**
+- **India Undiscovered**
+
+## Approved introduction
+
+> Indian food has a bigger story to tell — beyond the familiar.
+
+## Design treatment
+
+- Cream background
+- Same section-label typography used across the website
+- Pillars use the same card language as What We Serve
+- No pillar numbering
+- No pillar underline
+- Matching card border, padding, hover lift, hover border and typography
+- Subtle hover interaction
+
+The Discovery statement is treated as part of this same section rather than as a separate website section.
+
+**Status: LOCKED**
+
+Do not change the approved Why Saffron Kettle content, hierarchy, or design without explicit approval.
 
 # 9. FEATURED FOOD / MENU
 
@@ -417,20 +450,19 @@ The brand can be ambitious without pretending to already be a large restaurant c
 - [x] Logo placement
 - [x] Hero
 - [x] Our Story
+- [x] What We Serve
+- [x] Why Saffron Kettle
+- [x] Revision 6 visual baseline
 
 ## In progress
-- [ ] What We Serve
+- [ ] Featured Food / Menu
 
 ## Upcoming
-- [ ] Why Saffron Kettle
-- [ ] Featured Food / Menu
 - [ ] Contact / Order
 - [ ] Footer
 - [ ] Full mobile optimization
 - [ ] Final testing
 - [ ] Final deployment check
-
----
 
 # 17. FUTURE APP / ORDERING SYSTEM
 
@@ -578,7 +610,33 @@ Current development:
 
 ---
 
+# 22A. CURRENT WEBSITE BASELINE — REVISION 6
+
+**Date:** 2026-08-19
+
+Revision 6 is the current workable visual baseline.
+
+Locked sections:
+- Hero
+- Our Story
+- What We Serve
+- Why Saffron Kettle
+
+Current development task:
+- Featured Food / Menu
+
 # 23. UPDATE LOG
+
+### 2026-08-19
+- Updated the Master Document to reflect the current website state.
+- Marked **What We Serve** as LOCKED.
+- Marked **Why Saffron Kettle** as LOCKED.
+- Confirmed the three Why pillars: Beyond the Familiar, Made with Love, India Undiscovered.
+- Confirmed the approved Why introduction: "Indian food has a bigger story to tell — beyond the familiar."
+- Confirmed Why Saffron Kettle + Discovery are treated as one cream section.
+- Established Revision 6 as the current workable visual baseline.
+- Set Featured Food / Menu as the current development task.
+
 
 Use this section for future major changes.
 
