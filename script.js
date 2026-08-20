@@ -3,7 +3,8 @@ console.log("Saffron Kettle script.js loaded");
 fetch('data/featured-food.json')
   .then(response => response.json())
   .then(data => {
-    console.log('Featured food JSON loaded:', data);
+      window.featuredFoodData = data;
+      console.log('Featured food JSON loaded:', data);
   })
   .catch(error => {
     console.error('Featured food JSON failed to load:', error);
