@@ -1562,3 +1562,313 @@ button {
     line-height: 1.6;
   }
 }
+
+/* =========================================================
+   V1.3 — FEATURED FOOD
+========================================================= */
+
+.featured-food {
+  padding: 90px 0 100px;
+}
+
+
+.featured-food-heading {
+  width: min(100% - 48px, var(--max-width));
+  margin: 0 auto 55px;
+}
+
+
+.featured-food-heading h2 {
+  margin-bottom: 0;
+}
+
+
+.featured-grid {
+  width: min(100% - 48px, var(--max-width));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+.featured-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  overflow: hidden;
+
+  border: 1px solid var(--border-gold);
+
+  background: var(--black-card);
+
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.14);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.featured-card:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(229, 182, 79, 0.8);
+
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.22);
+}
+
+
+.featured-image {
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+}
+
+
+.featured-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.featured-card:hover .featured-image img {
+  transform: scale(1.04);
+}
+
+
+.featured-content {
+  flex: 1;
+
+  padding: 22px 24px 24px;
+}
+
+
+.featured-category {
+  color: var(--gold);
+
+  font-family: var(--sans);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+  line-height: 1.4;
+
+  margin-bottom: 8px;
+}
+
+
+.featured-content h3 {
+  color: var(--text-light);
+
+  font-size: 28px;
+  line-height: 1.1;
+
+  margin-bottom: 10px;
+}
+
+
+.featured-description {
+  color: var(--muted-light);
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  margin: 0;
+}
+
+
+.featured-link {
+  display: inline-block;
+
+  margin-top: 18px;
+
+  color: var(--gold-light);
+
+  font-family: var(--sans);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   FEATURED FOOD — TABLET
+========================================================= */
+
+@media (max-width: 999px) {
+
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .featured-card:last-child {
+    grid-column: 1 / -1;
+
+    width: calc((100% - 22px) / 2);
+
+    justify-self: center;
+  }
+
+}
+
+
+/* =========================================================
+   FEATURED FOOD — MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .featured-food {
+    padding: 75px 0 80px;
+  }
+
+
+  .featured-food-heading {
+    width: min(100% - 28px, var(--max-width));
+
+    margin-bottom: 38px;
+  }
+
+
+  .featured-grid {
+    width: min(100% - 28px, var(--max-width));
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  .featured-card:last-child {
+    grid-column: auto;
+
+    width: 100%;
+  }
+
+
+  .featured-content {
+    padding: 20px 20px 22px;
+  }
+
+
+  .featured-content h3 {
+    font-size: 25px;
+  }
+
+}
+
+/* =========================================================
+   FEATURED FOOD — CAROUSEL DOTS
+   V1.3
+========================================================= */
+
+.featured-image {
+  position: relative;
+}
+
+.featured-dish-name {
+  position: absolute;
+
+  left: 20px;
+  right: 20px;
+  bottom: 24px;
+
+  z-index: 2;
+
+  color: #e5b64f;
+  font-family: var(--serif);
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.22em;
+  text-align: center;
+  text-transform: uppercase;
+
+  text-shadow:
+    0 1px 6px rgba(0, 0, 0, 0.65);
+}
+
+.featured-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+
+  z-index: 2;
+}
+
+.featured-dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+  margin: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  opacity: 0.75;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.featured-dot:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.featured-dot.active {
+  background-color: #e5b64f;
+  border-color: #e5b64f;
+  opacity: 1;
+}
+
+
+/* Keep dots accessible without making them visually heavy */
+
+.featured-dot:focus-visible {
+  outline: 1px solid #e5b64f;
+  outline-offset: 3px;
+}
+
+/* Featured Food — smooth image/dish-name transition */
+
+.featured-image img,
+.featured-dish-name {
+  transition: opacity 0.7s ease;
+}
