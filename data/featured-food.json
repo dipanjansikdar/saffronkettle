@@ -1,0 +1,68 @@
+{
+  "bengali": [
+    {
+      "image": "images/food-bengali-01.svg",
+      "name": "Shorshe Ilish"
+    },
+    {
+      "image": "images/food-bengali-02.svg",
+      "name": "Chingri Malai Curry"
+    },
+    {
+      "image": "images/food-bengali-03.svg",
+      "name": "Kosha Mangsho"
+    },
+    {
+      "image": "images/food-bengali-04.svg",
+      "name": "Dhokar Dalna"
+    },
+    {
+      "image": "images/food-bengali-05.svg",
+      "name": "Mishti Doi"
+    }
+  ],
+  "classic": [
+    {
+      "image": "images/food-classic-01.svg",
+      "name": "Butter Chicken"
+    },
+    {
+      "image": "images/food-classic-02.svg",
+      "name": "Chicken Tikka"
+    },
+    {
+      "image": "images/food-classic-03.svg",
+      "name": "Biryani"
+    },
+    {
+      "image": "images/food-classic-04.svg",
+      "name": "Paneer Tikka"
+    },
+    {
+      "image": "images/food-classic-05.svg",
+      "name": "Dal Makhani"
+    }
+  ],
+  "discovery": [
+    {
+      "image": "images/food-discovery-01.svg",
+      "name": "Macher Jhol"
+    },
+    {
+      "image": "images/food-discovery-02.svg",
+      "name": "Laal Maas"
+    },
+    {
+      "image": "images/food-discovery-03.svg",
+      "name": "Kashmiri Rogan Josh"
+    },
+    {
+      "image": "images/food-discovery-04.svg",
+      "name": "Chettinad Chicken"
+    },
+    {
+      "image": "images/food-discovery-05.svg",
+      "name": "Malabar Parotta"
+    }
+  ]
+}

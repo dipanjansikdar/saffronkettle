@@ -1,387 +1,224 @@
 console.log("Saffron Kettle script.js loaded");
 
 // =========================================================
-// FEATURED FOOD — CARD 1 / BENGALI FAVOURITES
+// FEATURED FOOD DATA
 // =========================================================
 
-const bengaliCard = document.querySelector(
-  '[data-carousel="bengali"]'
-);
-
-if (bengaliCard) {
-
-  const image =
-    bengaliCard.querySelector('.featured-image img');
-
-  const dishName =
-    bengaliCard.querySelector('.featured-dish-name');
-
-  const dots =
-    bengaliCard.querySelectorAll('.featured-dot');
-
-  const bengaliDishes = [
-    {
-      image: 'images/food-bengali-01.svg',
-      name: 'Shorshe Ilish'
-    },
-    {
-      image: 'images/food-bengali-02.svg',
-      name: 'Chingri Malai Curry'
-    },
-    {
-      image: 'images/food-bengali-03.svg',
-      name: 'Kosha Mangsho'
-    },
-    {
-      image: 'images/food-bengali-04.svg',
-      name: 'Dhokar Dalna'
-    },
-    {
-      image: 'images/food-bengali-05.svg',
-      name: 'Mishti Doi'
+fetch('data/featured-food.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(
+        `Failed to load featured-food.json: ${response.status}`
+      );
     }
-  ];
 
-  let currentIndex = 0;
-  let timer;
+    return response.json();
+  })
 
+  .then(data => {
 
-    function showBengaliDish(index) {
+    window.featuredFoodData = data;
 
-    currentIndex = index;
+    console.log(
+      'Featured food JSON loaded:',
+      data
+    );
 
-    image.style.opacity = '0';
-    dishName.style.opacity = '0';
+    // =======================================================
+    // FEATURED FOOD — REUSABLE CAROUSEL
+    // =======================================================
 
-    setTimeout(() => {
+    function createFeaturedCarousel(card, dishes) {
 
-        image.src =
-        bengaliDishes[index].image;
+      // Stop if this card does not exist
+      if (!card) {
+        return;
+      }
 
-        image.alt =
-        bengaliDishes[index].name;
+      const image =
+        card.querySelector('.featured-image img');
 
-        dishName.textContent =
-        bengaliDishes[index].name;
+      const dishName =
+        card.querySelector('.featured-dish-name');
 
-        image.style.opacity = '1';
-        dishName.style.opacity = '1';
+      const dots =
+        card.querySelectorAll('.featured-dot');
 
-    }, 350);
-
-    dots.forEach((dot, i) => {
-
-        dot.classList.toggle(
-        'active',
-        i === index
+      // Safety check
+      if (!image || !dishName) {
+        console.warn(
+          'Featured carousel elements missing:',
+          card
         );
 
-        if (i === index) {
-        dot.setAttribute(
-            'aria-current',
-            'true'
-        );
-        } else {
-        dot.removeAttribute(
-            'aria-current'
-        );
+        return;
+      }
+
+      // Each carousel gets its OWN state
+      let currentIndex = 0;
+      let timer;
+
+
+      // =====================================================
+      // SHOW DISH
+      // =====================================================
+
+      function showDish(index) {
+
+        // Safety protection
+        if (
+          !dishes ||
+          dishes.length === 0 ||
+          index < 0 ||
+          index >= dishes.length
+        ) {
+          return;
         }
 
-    });
+        currentIndex = index;
 
-}
-
-
-  function startBengaliTimer() {
-
-    clearInterval(timer);
-
-    timer = setInterval(() => {
-
-      const nextIndex =
-        (currentIndex + 1) %
-        bengaliDishes.length;
-
-      showBengaliDish(nextIndex);
-
-    }, 5000);
-
-  }
+        image.style.opacity = '0';
+        dishName.style.opacity = '0';
 
 
-  dots.forEach((dot, index) => {
+        setTimeout(() => {
 
-    dot.addEventListener('click', () => {
+          image.src =
+            dishes[index].image;
 
-      showBengaliDish(index);
+          image.alt =
+            dishes[index].name;
 
-      startBengaliTimer();
+          dishName.textContent =
+            dishes[index].name;
 
-    });
+          image.style.opacity = '1';
+          dishName.style.opacity = '1';
 
-  });
-
-
-  showBengaliDish(0);
-
-  startBengaliTimer();
-
-}
-
-// =========================================================
-// FEATURED FOOD — CARD 2 / INDIAN CLASSICS
-// =========================================================
-
-const classicCard = document.querySelector(
-  '[data-carousel="classic"]'
-);
-
-if (classicCard) {
-
-  const image =
-    classicCard.querySelector('.featured-image img');
-
-  const dishName =
-    classicCard.querySelector('.featured-dish-name');
-
-  const dots =
-    classicCard.querySelectorAll('.featured-dot');
-
-  const classicDishes = [
-    {
-      image: 'images/food-classic-01.svg',
-      name: 'Butter Chicken'
-    },
-    {
-      image: 'images/food-classic-02.svg',
-      name: 'Chicken Tikka'
-    },
-    {
-      image: 'images/food-classic-03.svg',
-      name: 'Biryani'
-    },
-    {
-      image: 'images/food-classic-04.svg',
-      name: 'Paneer Tikka'
-    },
-    {
-      image: 'images/food-classic-05.svg',
-      name: 'Dal Makhani'
-    }
-  ];
-
-  let currentIndex = 0;
-  let timer;
+        }, 350);
 
 
-  function showClassicDish(index) {
+        // ===================================================
+        // UPDATE DOTS
+        // ===================================================
 
-    currentIndex = index;
+        dots.forEach((dot, i) => {
 
-    image.style.opacity = '0';
-    dishName.style.opacity = '0';
-
-    setTimeout(() => {
-
-      image.src =
-        classicDishes[index].image;
-
-      image.alt =
-        classicDishes[index].name;
-
-      dishName.textContent =
-        classicDishes[index].name;
-
-      image.style.opacity = '1';
-      dishName.style.opacity = '1';
-
-    }, 350);
+          dot.classList.toggle(
+            'active',
+            i === index
+          );
 
 
-    dots.forEach((dot, i) => {
+          if (i === index) {
 
-      dot.classList.toggle(
-        'active',
-        i === index
-      );
+            dot.setAttribute(
+              'aria-current',
+              'true'
+            );
 
-      if (i === index) {
-        dot.setAttribute(
-          'aria-current',
-          'true'
-        );
-      } else {
-        dot.removeAttribute(
-          'aria-current'
-        );
+          } else {
+
+            dot.removeAttribute(
+              'aria-current'
+            );
+
+          }
+
+        });
+
       }
 
-    });
 
-  }
+      // =====================================================
+      // START TIMER
+      // =====================================================
 
+      function startTimer() {
 
-  function startClassicTimer() {
+        clearInterval(timer);
 
-    clearInterval(timer);
+        timer = setInterval(() => {
 
-    timer = setInterval(() => {
+          const nextIndex =
+            (currentIndex + 1) %
+            dishes.length;
 
-      const nextIndex =
-        (currentIndex + 1) %
-        classicDishes.length;
+          showDish(nextIndex);
 
-      showClassicDish(nextIndex);
+        }, 5000);
 
-    }, 5000);
-
-  }
-
-
-  dots.forEach((dot, index) => {
-
-    dot.addEventListener('click', () => {
-
-      showClassicDish(index);
-
-      startClassicTimer();
-
-    });
-
-  });
-
-
-  showClassicDish(0);
-
-  startClassicTimer();
-
-}
-
-// =========================================================
-// FEATURED FOOD — CARD 3 / BEYOND THE FAMILIAR
-// =========================================================
-
-const discoveryCard = document.querySelector(
-  '[data-carousel="discovery"]'
-);
-
-if (discoveryCard) {
-
-  const image =
-    discoveryCard.querySelector('.featured-image img');
-
-  const dishName =
-    discoveryCard.querySelector('.featured-dish-name');
-
-  const dots =
-    discoveryCard.querySelectorAll('.featured-dot');
-
-  const discoveryDishes = [
-    {
-      image: 'images/food-discovery-01.svg',
-      name: 'Macher Jhol'
-    },
-    {
-      image: 'images/food-discovery-02.svg',
-      name: 'Laal Maas'
-    },
-    {
-      image: 'images/food-discovery-03.svg',
-      name: 'Kashmiri Rogan Josh'
-    },
-    {
-      image: 'images/food-discovery-04.svg',
-      name: 'Chettinad Chicken'
-    },
-    {
-      image: 'images/food-discovery-05.svg',
-      name: 'Malabar Parotta'
-    }
-  ];
-
-  let currentIndex = 0;
-  let timer;
-
-
-  function showDiscoveryDish(index) {
-
-    currentIndex = index;
-
-    image.style.opacity = '0';
-    dishName.style.opacity = '0';
-
-    setTimeout(() => {
-
-      image.src =
-        discoveryDishes[index].image;
-
-      image.alt =
-        discoveryDishes[index].name;
-
-      dishName.textContent =
-        discoveryDishes[index].name;
-
-      image.style.opacity = '1';
-      dishName.style.opacity = '1';
-
-    }, 350);
-
-
-    dots.forEach((dot, i) => {
-
-      dot.classList.toggle(
-        'active',
-        i === index
-      );
-
-      if (i === index) {
-        dot.setAttribute(
-          'aria-current',
-          'true'
-        );
-      } else {
-        dot.removeAttribute(
-          'aria-current'
-        );
       }
 
-    });
 
-  }
+      // =====================================================
+      // DOT CLICK HANDLERS
+      // =====================================================
 
+      dots.forEach((dot, index) => {
 
-  function startDiscoveryTimer() {
+        dot.addEventListener('click', () => {
 
-    clearInterval(timer);
+          showDish(index);
 
-    timer = setInterval(() => {
+          // Restart this carousel's timer only
+          startTimer();
 
-      const nextIndex =
-        (currentIndex + 1) %
-        discoveryDishes.length;
+        });
 
-      showDiscoveryDish(nextIndex);
-
-    }, 5000);
-
-  }
+      });
 
 
-  dots.forEach((dot, index) => {
+      // =====================================================
+      // INITIAL DISPLAY
+      // =====================================================
 
-    dot.addEventListener('click', () => {
+      showDish(0);
 
-      showDiscoveryDish(index);
+      startTimer();
 
-      startDiscoveryTimer();
+    }
 
-    });
+
+    // =======================================================
+    // INITIALISE THE THREE FEATURED FOOD CAROUSELS
+    // =======================================================
+
+    createFeaturedCarousel(
+      document.querySelector(
+        '[data-carousel="bengali"]'
+      ),
+      data.bengali
+    );
+
+
+    createFeaturedCarousel(
+      document.querySelector(
+        '[data-carousel="classic"]'
+      ),
+      data.classic
+    );
+
+
+    createFeaturedCarousel(
+      document.querySelector(
+        '[data-carousel="discovery"]'
+      ),
+      data.discovery
+    );
+
+  })
+
+
+  // =========================================================
+  // JSON LOAD ERROR
+  // =========================================================
+
+  .catch(error => {
+
+    console.error(
+      'Featured food JSON failed to load:',
+      error
+    );
 
   });
-
-
-  showDiscoveryDish(0);
-
-  startDiscoveryTimer();
-
-}
