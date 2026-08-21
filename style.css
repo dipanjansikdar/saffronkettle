@@ -196,7 +196,7 @@ button {
 .section-heading h2,
 .story-copy h2,
 .contact-copy h2 {
-  font-size: clamp(46px, 6vw, 78px);
+  font-size: clamp(46px, 5vw, 72px);
   line-height: 0.98;
   letter-spacing: -2px;
   margin: 18px 0 28px;
@@ -396,10 +396,6 @@ button {
   font-size: 13px;
   font-weight: 700;
   margin-top: 20px;
-}
-
-.story-copy h2 {
-  font-size: clamp(48px, 5vw, 72px);
 }
 
 .story-copy > p {
@@ -804,7 +800,7 @@ button {
 }
 
 .contact-copy h2 {
-  font-size: clamp(50px, 6vw, 78px);
+  font-size: clamp(42px, 4.4vw, 60px);
 }
 
 .contact-copy > p {
@@ -1871,4 +1867,286 @@ button {
 .featured-image img,
 .featured-dish-name {
   transition: opacity 0.7s ease;
+}
+
+/* =========================================================
+   CONTACT / ORDER — V1.5
+========================================================= */
+
+.contact {
+  padding: 100px 6%;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   CONTACT COPY
+========================================================= */
+
+.contact-copy {
+  max-width: 520px;
+}
+
+.contact-copy h2 {
+  margin-bottom: 25px;
+}
+
+.contact-copy > p:not(.eyebrow) {
+  max-width: 500px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTACT DETAILS
+========================================================= */
+
+.contact-details {
+  display: grid;
+  gap: 24px;
+
+  margin-top: 40px;
+}
+
+.contact-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.contact-detail small {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  color: #b08a3e;
+}
+
+.contact-detail strong {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   CONTACT NOTE
+========================================================= */
+
+.contact-note {
+  margin-top: 40px;
+  padding-left: 20px;
+
+  border-left: 2px solid #b08a3e;
+}
+
+.contact-note p {
+  margin: 0 0 10px;
+  line-height: 1.7;
+}
+
+.contact-note p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.contact-form-card {
+  padding: 45px;
+
+  background: #111111;
+
+  border: 1px solid rgba(176, 138, 62, 0.35);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form-eyebrow {
+  margin: 0 0 12px;
+
+  color: #b08a3e;
+
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+}
+
+.contact-form-card h3 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.contact-form-intro {
+  margin: 0 0 30px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  background: #181818;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+
+  border-radius: 0;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #b08a3e;
+
+  background: #1c1c1c;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.form-field select {
+  appearance: auto;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.contact-submit {
+  align-self: flex-start;
+
+  border: none;
+
+  cursor: pointer;
+
+  margin-top: 5px;
+}
+
+.contact-form-note {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .contact {
+    padding: 75px 6%;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .contact-copy {
+    max-width: none;
+  }
+
+  .contact-form-card {
+    padding: 30px 25px;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-card {
+    padding: 25px 20px;
+  }
+
+  .contact-form-card h3 {
+    font-size: 1.7rem;
+  }
+
 }

@@ -610,12 +610,17 @@
     </section>
 
 
-    <!-- =========================
-         CONTACT / ORDER
+   <!-- =========================
+        CONTACT / ORDER — V1.5
     ========================== -->
+
     <section id="contact" class="contact section-light">
 
       <div class="contact-container">
+
+        <!-- =========================
+            CONTACT INFORMATION
+        ========================== -->
 
         <div class="contact-copy">
 
@@ -623,21 +628,23 @@
             CONTACT / ORDER
           </p>
 
-          <h2>
-            Let's bring<br>
-            <span>Indian flavours</span><br>
-            to your table.
-          </h2>
+        <h2>
+          Let's bring
+          <span>Indian flavours</span>
+          to your table.
+        </h2>
 
           <p>
-            Interested in ordering, asking about the menu, or simply
-            finding out what is cooking? Get in touch with Saffron Kettle.
+            Interested in ordering, asking about the menu, arranging catering,
+            or simply finding out what is cooking? Get in touch with
+            Saffron Kettle.
           </p>
 
 
           <div class="contact-details">
 
-            <div>
+            <div class="contact-detail">
+
               <small>
                 LOCATION
               </small>
@@ -645,10 +652,12 @@
               <strong>
                 Helsingborg, Sweden
               </strong>
+
             </div>
 
 
-            <div>
+            <div class="contact-detail">
+
               <small>
                 EMAIL
               </small>
@@ -656,33 +665,177 @@
               <strong>
                 Coming soon
               </strong>
+
             </div>
+
+          </div>
+
+
+          <div class="contact-note">
+
+            <p>
+              We are currently preparing our ordering service.
+            </p>
+
+            <p>
+              For now, use this form to tell us what you are interested in
+              and we will get back to you.
+            </p>
 
           </div>
 
         </div>
 
 
-        <div class="contact-card">
+        <!-- =========================
+            ENQUIRY FORM
+        ========================== -->
 
-          <img
-            src="images/logo.jpeg"
-            alt="Saffron Kettle SK monogram"
-          >
+        <div class="contact-form-card">
 
-          <h3>
-            Made with Love.<br>
-            Served with Pride.
-          </h3>
-
-          <p>
-            Follow Saffron Kettle as we build our menu and share more
-            of India's flavours.
+          <p class="contact-form-eyebrow">
+            GET IN TOUCH
           </p>
 
-          <a class="btn btn-dark" href="mailto:">
-            Contact Saffron Kettle
-          </a>
+          <h3>
+            Send an enquiry
+          </h3>
+
+          <p class="contact-form-intro">
+            Tell us a little about what you are looking for.
+          </p>
+
+
+          <form class="contact-form">
+
+            <div class="form-row">
+
+              <div class="form-field">
+
+                <label for="contact-name">
+                  Name
+                </label>
+
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  placeholder="Your name"
+                  autocomplete="name"
+                >
+
+              </div>
+
+
+              <div class="form-field">
+
+                <label for="contact-email">
+                  Email
+                </label>
+
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-field">
+
+                <label for="contact-phone">
+                  Phone
+                </label>
+
+                <input
+                  type="tel"
+                  id="contact-phone"
+                  name="phone"
+                  placeholder="Your phone number"
+                  autocomplete="tel"
+                >
+
+              </div>
+
+
+              <div class="form-field">
+
+                <label for="contact-enquiry">
+                  I'm interested in
+                </label>
+
+                <select
+                  id="contact-enquiry"
+                  name="enquiry"
+                >
+
+                  <option value="">
+                    Please choose
+                  </option>
+
+                  <option value="order">
+                    Ordering food
+                  </option>
+
+                  <option value="catering">
+                    Catering
+                  </option>
+
+                  <option value="event">
+                    Private event
+                  </option>
+
+                  <option value="menu">
+                    Menu information
+                  </option>
+
+                  <option value="general">
+                    General enquiry
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <div class="form-field">
+
+              <label for="contact-message">
+                Message
+              </label>
+
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="5"
+                placeholder="Tell us what you have in mind..."
+              ></textarea>
+
+            </div>
+
+
+            <button
+              type="button"
+              class="btn btn-gold contact-submit"
+            >
+              Send Enquiry
+            </button>
+
+
+            <p class="contact-form-note">
+              Online ordering will be available soon.
+            </p>
+
+          </form>
 
         </div>
 
