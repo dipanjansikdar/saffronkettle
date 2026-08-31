@@ -1,108 +1,48 @@
-# SAFFRON KETTLE --- MASTER PROJECT DOCUMENT
+# SAFFRON KETTLE — MASTER PROJECT DOCUMENT
 
-**Project:** Saffron Kettle\
-**Website:** saffronkettle.com\
-**Business:** Home-based Indian food / cloud kitchen\
-**Primary market:** Helsingborg, Sweden\
-**Long-term vision:** Build a recognizable Indian food brand that can
-eventually expand beyond Helsingborg and Sweden.
+**Project:** Saffron Kettle  
+**Website:** saffronkettle.com  
+**Business:** Home-based Indian food / cloud kitchen  
+**Primary market:** Helsingborg, Sweden  
+**Long-term vision:** Build a recognizable Indian food brand that can eventually expand beyond Helsingborg and Sweden.
 
-------------------------------------------------------------------------
+---
 
 # CURRENT STATE
 
+**Last updated:** 2026-08-31
+
 ## Completed
 
--   [x] Domain
--   [x] GitHub setup
--   [x] Cloudflare setup
--   [x] Logo placement
--   [x] Hero
--   [x] Our Story
--   [x] What We Serve
--   [x] Why Saffron Kettle
--   [x] V1.0 baseline locked in GitHub
--   [x] V1.1 Our Story refinement locked in GitHub
--   [x] Revision 6 visual baseline
--   [x] V1.3 Featured Food structure and carousel logic
--   [x] Featured Food data moved to `data/featured-food.json`
--   [x] Shared JavaScript carousel logic implemented for all three cards
--   [x] Independent 5-second timers implemented for each card
--   [x] Independent dots and dish-name updates implemented for each card
+- [x] Domain
+- [x] GitHub setup
+- [x] Cloudflare setup
+- [x] Logo placement
+- [x] Hero
+- [x] Our Story
+- [x] What We Serve
+- [x] Why Saffron Kettle
+- [x] Featured Food / Menu
+- [x] Contact / Order
+- [x] Privacy Policy page
 
 ## Current task
 
--   [ ] Verify V1.3 + JSON-driven carousel on GitHub Pages/custom domain
--   [ ] Replace placeholder food artwork with actual food images and
-    visually review the crossfade
-
-## Next
-
--   [ ] Contact / Order
--   [ ] Footer
--   [ ] Full mobile optimization
--   [ ] Final testing
--   [ ] Final deployment check
-
-## Current website section structure
-
-1.  **Hero** --- dark
-2.  **Our Story** --- cream
-3.  **What We Serve** --- dark
-4.  **Why Saffron Kettle + Discovery** --- cream, treated as one section
-5.  **Featured Food** --- dark
-6.  **Contact / Order** --- cream
-7.  **Footer** --- dark
-
-## Current design baseline
-
-Revision 6 is the current workable visual baseline.
-
-The following are established: - Consistent section-label typography -
-Compact section spacing intended to keep each major section roughly
-within one scroll window - Consistent card language between What We
-Serve and Why Saffron Kettle - Shared card border, padding, hover lift,
-hover border and typography - No numbering or underline treatment on the
-Why Saffron Kettle pillars - Approved short Why Saffron Kettle
-introduction: \> Indian food has a bigger story to tell --- beyond the
-familiar.
-
-## Version Baselines
-
--   **V1.0** --- Initial approved website baseline.
--   **V1.1** --- Approved refinement of the Our Story section; current
-    stable baseline.
-
-### V1.1 Our Story --- LOCKED
-
-Approved story identity:
-
-> Rooted in Bengal. Shaped by India. Inspired by discovery. Conceived in
-> Sudipta's Kitchen.
-
-Approved continuation:
-
-> And that is only the beginning.
-
-The stacked presentation and compact typography are part of the approved
-V1.1 treatment. Do not change the Our Story wording, hierarchy, or
-layout without explicit approval.
+- [ ] Footer / legal links finalization
+- [ ] Full mobile optimization
+- [ ] Final testing
+- [ ] Final deployment check
 
 ## Locked
 
--   Black + gold visual direction
--   Hero
--   Our Story
--   Tagline direction: **Made with Love**
+- Black + gold visual direction
+- Hero
+- Our Story
+- Tagline: **Made with Heart. Served with Pride.**
+- Current `mailto:` contact implementation
+- Current privacy approach: no server-side contact-form storage
 
-## Do not change without explicit approval
-
--   Hero
--   Our Story
--   Brand direction
--   Core visual identity
-
-------------------------------------------------------------------------
+---
 
 # 1. BRAND IDENTITY
 
@@ -110,13 +50,15 @@ layout without explicit approval.
 
 **Saffron Kettle**
 
-The name was selected because it: - starts with **S** - works with the
-desired **SK** initials - feels connected to food and cooking - can work
-as a broader brand if the business expands
+The name was selected because it:
+- starts with **S**
+- works with the desired **SK** initials
+- feels connected to food and cooking
+- can work as a broader brand if the business expands
 
 ## Tagline
 
-**Made with Love**
+**Made with Heart. Served with Pride.**
 
 This is the current approved tagline.
 
@@ -124,16 +66,21 @@ This is the current approved tagline.
 
 **SK**
 
-The SK monogram is intended to become an important visual element of the
-brand.
+The SK monogram is intended to become an important visual element of the brand.
 
 ## Brand Personality
 
-The brand should feel: - Warm - Authentic - Premium but approachable -
-Homemade - Indian - Proud - Welcoming - Modern without losing cultural
-identity
+The brand should feel:
+- Warm
+- Authentic
+- Premium but approachable
+- Homemade
+- Indian
+- Proud
+- Welcoming
+- Modern without losing cultural identity
 
-------------------------------------------------------------------------
+---
 
 # 2. VISUAL DIRECTION
 
@@ -141,34 +88,46 @@ identity
 
 **Black + Gold**
 
-The website should have an elegant, premium appearance rather than
-looking like a generic restaurant template.
+The website should have an elegant, premium appearance rather than looking like a generic restaurant template.
 
 ## General Design Direction
 
-Desired characteristics: - Dark/elegant background - Gold accents -
-High-quality food photography - Strong typography - Generous spacing -
-Clean layouts - Premium but warm - Mobile-friendly - Avoid excessive
-visual clutter
+Desired characteristics:
+- Dark/elegant background
+- Gold accents
+- High-quality food photography
+- Strong typography
+- Generous spacing
+- Clean layouts
+- Premium but warm
+- Mobile-friendly
+- Avoid excessive visual clutter
 
-The website should feel like a **real food brand**, not simply a
-home-cooking hobby page.
+The website should feel like a **real food brand**, not simply a home-cooking hobby page.
 
-------------------------------------------------------------------------
+---
 
 # 3. WEBSITE TECHNOLOGY
 
 ## Current Stack
 
--   HTML
--   CSS
--   JavaScript where required
--   GitHub for source code/hosting
--   Cloudflare for DNS/domain management
+- HTML
+- CSS
+- JavaScript where required
+- GitHub for source code/hosting
+- Cloudflare for DNS/domain management
 
 ## Domain
 
 **saffronkettle.com**
+
+## Additional domains
+
+The project has also considered/used additional domains including:
+- sudiptaskitchen.se
+- saffronkettle.se
+
+These domains may be redirected to the primary website/domain as required.
 
 ## Current Infrastructure
 
@@ -176,70 +135,64 @@ home-cooking hobby page.
 
 ## Source-of-truth rule
 
-The GitHub project is the **source of truth for the actual website
-code**.
+The GitHub project is the **source of truth for the actual website code**.
 
-ChatGPT conversation history should not be treated as the authoritative
-copy of the code.
-
-------------------------------------------------------------------------
+---
 
 # 4. WEBSITE STRUCTURE
 
-The planned website contains:
+The website contains:
+1. Hero
+2. Our Story
+3. What We Serve
+4. Why Saffron Kettle
+5. Featured Food / Menu
+6. Contact / Order
+7. Footer
+8. Privacy Policy page
 
-1.  Hero
-2.  Our Story
-3.  What We Serve
-4.  Why Saffron Kettle
-5.  Featured Food / Menu
-6.  Contact / Order
-7.  Footer
+---
 
-------------------------------------------------------------------------
-
-# 5. HERO --- LOCKED
+# 5. HERO — LOCKED
 
 The Hero section has been completed and approved.
 
 ## Design direction
 
-Two-column layout:
+Two-column layout.
 
 ### Left
-
--   Saffron Kettle branding/message
--   Main headline
--   Supporting text
--   CTA/action
+- Saffron Kettle branding/message
+- Main headline
+- Supporting text
+- CTA/action
 
 ### Right
-
--   Styled food visual/image
-
-The Hero should remain consistent with the black-and-gold premium
-design.
+- Styled food visual/image
 
 **Status: LOCKED**
 
 Do not redesign unless explicitly requested.
 
-------------------------------------------------------------------------
+---
 
-# 6. OUR STORY --- LOCKED
+# 6. OUR STORY — LOCKED
 
 The Our Story section has been completed and approved.
 
 **Status: LOCKED**
 
-The current approved version should not be changed unless explicitly
-requested.
+The approved positioning includes:
 
-------------------------------------------------------------------------
+**Rooted in Bengal. Shaped by India. Inspired by discovery.**
 
-# 7. WHAT WE SERVE --- LOCKED
+The story should not overemphasize Bengal to the point of making Saffron Kettle appear to be exclusively a Bengali-food business.
 
-The What We Serve section has now been completed and approved.
+---
+
+# 7. WHAT WE SERVE — COMPLETED
+
+The What We Serve section has been completed.
 
 ## Important content decision
 
@@ -247,263 +200,262 @@ Do **not** describe the food simply as:
 
 > "North Indian and South Indian cuisine."
 
-We specifically decided against limiting the brand that way because
-Indian cuisine is much broader and there are many regional and culinary
-traditions that should eventually be represented.
+Indian cuisine is broader than those two categories and the brand should remain open to different regional and culinary traditions.
 
-## Approved positioning
+**Status: COMPLETED**
 
-The section communicates that Saffron Kettle offers a broad selection of
-Indian food inspired by different regions, traditions and styles.
+---
 
-The wording remains inclusive rather than creating a rigid regional
-classification.
+# 8. WHY SAFFRON KETTLE — COMPLETED
 
-**Status: LOCKED**
+The Why Saffron Kettle section has been implemented.
 
-Do not change the approved What We Serve content, hierarchy, or design
-without explicit approval.
+## Core themes
 
-# 8. WHY SAFFRON KETTLE --- LOCKED
+- Made with care
+- Authentic flavours
+- Quality ingredients
+- Homemade character
+- Attention to detail
+- Small-batch preparation
+- Food made with pride
 
-The Why Saffron Kettle section has now been completed and approved.
+**Status: COMPLETED**
 
-## Purpose
+---
 
-Explain what differentiates Saffron Kettle from ordinary
-restaurant/takeaway food.
+# 9. FEATURED FOOD / MENU — COMPLETED
 
-## Approved pillars
+The Featured Food / Menu functionality has been implemented.
 
-The section uses three pillars:
+Featured food content is maintained through the website's featured-food data rather than requiring every dish to be hard-coded directly into the main page structure.
 
--   **Beyond the Familiar**
--   **Made with Love**
--   **India Undiscovered**
+The exact final commercial menu may evolve over time.
 
-## Approved introduction
+Do not invent new final menu items without discussing them first.
 
-> Indian food has a bigger story to tell --- beyond the familiar.
+**Status: COMPLETED**
 
-## Design treatment
+---
 
--   Cream background
--   Same section-label typography used across the website
--   Pillars use the same card language as What We Serve
--   No pillar numbering
--   No pillar underline
--   Matching card border, padding, hover lift, hover border and
-    typography
--   Subtle hover interaction
+# 10. CONTACT / ORDER — COMPLETED
 
-The Discovery statement is treated as part of this same section rather
-than as a separate website section.
+The Contact / Order section has been implemented.
 
-**Status: LOCKED**
+## Current functionality
 
-Do not change the approved Why Saffron Kettle content, hierarchy, or
-design without explicit approval.
+The contact form collects:
+- Name
+- Email
+- Phone
+- Enquiry type
+- Message
 
-# 9. FEATURED FOOD / MENU --- V1.3 IN PROGRESS
+The available enquiry categories include:
+- Ordering food
+- Catering
+- Private event
+- Menu information
+- General enquiry
 
-The Featured Food section has been implemented as the next major website
-feature.
+## Current contact architecture
 
-## Purpose
+The website currently uses a **`mailto:` approach**.
 
-Show customers selected food categories and rotating featured dishes
-while keeping the page visually clean and easy to maintain.
+The website does **not** send the form submission to a server.
 
-## Current structure
+JavaScript creates an email link and opens the visitor's configured email application.
 
-The section contains three independent cards:
+The visitor can then review and send the email through their own email service.
 
-1.  **Bengali Favourites**
-2.  **Indian Classics**
-3.  **Beyond the Familiar**
+## Current business email
 
-Each card contains:
+**sudiptaskitchen@outlook.com**
 
--   Image area
--   Dish name
--   Five navigation dots
--   Category label
--   Short descriptive copy
--   Discover link
+## Email-client fallback
 
-## Current carousel behaviour
+If no email application is configured, the visitor is instructed to email:
 
-Each card has its own:
+**sudiptaskitchen@outlook.com**
 
--   Current dish index
--   Five-second timer
--   Navigation dots
--   Dish-name update
--   Image update
--   Fade-out / update / fade-in transition
+directly.
 
-The timers are intentionally independent. Reusing the same JavaScript
-logic must not synchronize the three cards.
+## Privacy characteristic
 
-The current transition uses a short fade-out before the image and dish
-name are updated, followed by a fade-in.
+The current contact form does not:
+- submit information to a Saffron Kettle web server
+- store submissions in a website database
+- require a server-side form-processing service
+- create an online customer account
 
-## Current data model
+The information becomes part of the email only if the visitor chooses to send the message.
 
-Dish names and image paths are being moved out of JavaScript into:
+## Future ordering
 
-`data/featured-food.json`
+Online ordering is still a future development phase.
 
-The JSON data is intended to become the single maintenance point for
-Featured Food content.
+A proper ordering application may eventually be added.
 
-The JavaScript should contain the carousel logic only and should not
-contain three separate hard-coded dish arrays.
+**Status: COMPLETED — CURRENT BASIC IMPLEMENTATION**
 
-## Current placeholder data
-
-### Bengali Favourites
-
--   Shorshe Ilish
--   Chingri Malai Curry
--   Kosha Mangsho
--   Dhokar Dalna
--   Mishti Doi
-
-### Indian Classics
-
--   Butter Chicken
--   Chicken Tikka
--   Biryani
--   Paneer Tikka
--   Dal Makhani
-
-### Beyond the Familiar
-
--   Macher Jhol
--   Laal Maas
--   Kashmiri Rogan Josh
--   Chettinad Chicken
--   Malabar Parotta
-
-These are working placeholder/demo entries for the carousel structure.
-They are not yet the final production menu.
-
-## HTML-to-data connection
-
-Each card is identified in HTML using a data attribute:
-
--   `data-carousel="bengali"`
--   `data-carousel="classic"`
--   `data-carousel="discovery"`
-
-These identifiers allow the shared JavaScript logic to connect each card
-to its corresponding JSON data set without maintaining three separate
-logic blocks.
-
-## Current image status
-
-The current carousel uses placeholder SVG artwork.
-
-Actual food images have not yet been inserted.
-
-The fade/crossfade behaviour should be reviewed again once the real
-images are available.
-
-## Current status
-
-**STRUCTURE AND LOGIC WORKING LOCALLY**
-
-**JSON DATA MODEL WORKING LOCALLY**
-
-**FINAL VISUAL BASELINE NOT YET LOCKED**
-
-Do not mark Featured Food as fully LOCKED until the actual images have
-been inserted and the visual result has been reviewed.
-
-------------------------------------------------------------------------
-
-# 10. CONTACT / ORDER
-
-Planned section.
-
-Potential functionality: - Contact information - Ordering instructions -
-Pickup information - Delivery information - Order CTA - Social media
-links - Future online ordering
-
-For the first website version, this does not necessarily need to be a
-full automated ordering system.
-
-A proper ordering application can be added later.
-
-------------------------------------------------------------------------
+---
 
 # 11. FOOTER
 
-Planned section.
+## Planned elements
 
-Potential elements: - Saffron Kettle logo - SK monogram - Tagline -
-Navigation links - Contact information - Social links - Copyright -
-Legal/business information
+Potential elements:
+- Saffron Kettle logo
+- SK monogram
+- Tagline
+- Navigation links
+- Contact information
+- Social links
+- Copyright
+- Legal/business information
+- Privacy Policy link
 
-Exact content is not yet finalized.
+## Current status
 
-------------------------------------------------------------------------
+The Footer requires final review to ensure:
+- Privacy Policy is linked correctly
+- navigation links work
+- contact information is correct
+- legal/business information is appropriate
+- mobile layout is clean
 
-# 12. IMAGES & ASSETS
+**Status: IN PROGRESS**
+
+---
+
+# 12. PRIVACY POLICY — COMPLETED
+
+A dedicated **`privacy.html`** page has been created.
+
+## Current privacy model
+
+The website currently does not have:
+- a user account system
+- a website database
+- server-side contact-form storage
+- advertising tracking
+- behavioural tracking cookies
+
+## Contact form
+
+The Contact form uses a `mailto:` link.
+
+The website itself does not store the submitted information.
+
+When a visitor chooses to send an enquiry, the email is handled through:
+- the visitor's own email service
+- Saffron Kettle's email provider
+
+## Information visitors may provide
+
+Visitors may voluntarily provide:
+- Name
+- Email address
+- Phone number
+- Enquiry category
+- Message contents
+
+## Use of information
+
+Information received through email is used to:
+- respond to enquiries
+- communicate about relevant orders
+- communicate about catering enquiries
+- communicate about events
+- respond to other legitimate requests
+
+Contact information is not used for unrelated marketing purposes unless there is an appropriate lawful basis or consent where required.
+
+## Retention
+
+Email information may be retained only for as long as reasonably necessary to:
+- handle the enquiry
+- fulfil a resulting business relationship
+- meet applicable legal or accounting obligations
+
+## GDPR rights
+
+The Privacy Policy explains that, depending on the circumstances, visitors may have rights under the GDPR concerning their personal data, including rights relating to:
+- access
+- correction
+- deletion
+- restriction of processing
+
+Privacy-related requests should be directed to:
+
+**sudiptaskitchen@outlook.com**
+
+## Future changes
+
+If the website later introduces server-side forms, databases, analytics, advertising, behavioural tracking, customer accounts, online ordering, payment processing, or other services involving personal data, the privacy/data-processing approach must be reviewed and the Privacy Policy updated accordingly.
+
+**Status: COMPLETED**
+
+---
+
+# 13. IMAGES & ASSETS
 
 ## Logo
-
-The logo has been moved into the project's images folder.
 
 Current path:
 
 `images/logo.jpeg`
 
-When referring to the logo in HTML, maintain the correct relative path.
+Maintain consistent relative paths.
 
 ## Image rule
 
-All website images should be stored/managed consistently.
+All website images should be stored and referenced consistently.
 
-Avoid mixing inconsistent paths such as:
+## Food images
 
-`logo.jpeg`
+Food imagery should maintain the premium, warm and authentic visual direction.
 
-and
+Avoid generic stock imagery where possible.
 
-`images/logo.jpeg`
+---
 
-unless the file genuinely exists at both locations.
+# 14. RESPONSIVE DESIGN
 
-------------------------------------------------------------------------
+The website must work well on:
+- Desktop
+- Laptop
+- Tablet
+- Mobile phone
 
-# 13. RESPONSIVE DESIGN
+Particular attention should be given to:
+- Navigation
+- Hero layout
+- Food images
+- Text size
+- Buttons
+- Cards
+- Spacing
+- Menu layouts
+- Contact form
+- Privacy page
+- Footer
 
-The website must work well on: - Desktop - Laptop - Tablet - Mobile
-phone
+Mobile optimization remains part of the final review process.
 
-Mobile responsiveness is part of the core website design.
+**Status: IN PROGRESS**
 
-Particular attention should be given to: - Navigation - Hero layout -
-Food images - Text size - Buttons - Cards - Spacing - Menu layouts
+---
 
-------------------------------------------------------------------------
-
-# 14. DESIGN PRINCIPLES
-
-Every new section should follow these principles.
+# 15. DESIGN PRINCIPLES
 
 ## Consistency
 
-New sections must visually belong to the existing Hero and Our Story
-sections.
+New sections must visually belong to the existing Hero and Our Story sections.
 
 ## Premium but warm
 
 Avoid making the website look like a corporate luxury brand.
-
-It should retain the feeling of food made with care.
 
 ## Authenticity
 
@@ -517,95 +469,124 @@ Do not add visual elements merely because they are technically possible.
 
 Every section should be checked on mobile.
 
-------------------------------------------------------------------------
+---
 
-# 15. CONTENT PRINCIPLES
+# 16. CONTENT PRINCIPLES
 
 The website should communicate:
 
 **Indian food made with care and pride.**
 
-Avoid: - Overly generic restaurant clichés - Excessive claims about
-"100% authentic" unless justified - Limiting Indian cuisine to only
-North/South categories - Overly complicated descriptions - Making the
-business sound larger than it currently is
+Avoid:
+- Overly generic restaurant clichés
+- Excessive claims about "100% authentic" unless justified
+- Limiting Indian cuisine to only North/South categories
+- Overly complicated descriptions
+- Making the business sound larger than it currently is
 
-The brand can be ambitious without pretending to already be a large
-restaurant chain.
+The brand can be ambitious without pretending to already be a large restaurant chain.
 
-------------------------------------------------------------------------
+---
 
-# 16. CURRENT DEVELOPMENT STATUS
+# 17. CURRENT DEVELOPMENT STATUS
 
 ## Completed
 
--   [x] Domain
--   [x] GitHub setup
--   [x] Cloudflare setup
--   [x] Logo placement
--   [x] Hero
--   [x] Our Story
--   [x] What We Serve
--   [x] Why Saffron Kettle
--   [x] Revision 6 visual baseline
+- [x] Domain
+- [x] GitHub setup
+- [x] Cloudflare setup
+- [x] Logo placement
+- [x] Hero
+- [x] Our Story
+- [x] What We Serve
+- [x] Why Saffron Kettle
+- [x] Featured Food / Menu
+- [x] Contact / Order
+- [x] Privacy Policy
 
 ## In progress
 
--   [ ] Verify Featured Food carousel deployment on GitHub Pages/custom
-    domain
--   [ ] Replace placeholder food artwork with final images
--   [ ] Final visual review of Featured Food crossfade and spacing
+- [ ] Footer / legal links finalization
+- [ ] Full mobile optimization
+- [ ] Final testing
+- [ ] Final deployment check
 
 ## Upcoming
 
--   [ ] Contact / Order
--   [ ] Footer
--   [ ] Full mobile optimization
--   [ ] Final testing
--   [ ] Final deployment check
+- [ ] Production deployment
+- [ ] Final domain verification
+- [ ] Final cross-device testing
 
-# 17. FUTURE APP / ORDERING SYSTEM
+---
+
+# 18. FUTURE APP / ORDERING SYSTEM
 
 The website may eventually evolve into a complete ordering platform.
 
 ## Customer
 
-Potential functionality: - Browse menu - Food categories - Food
-details - Shopping cart - Customer account - Pickup/delivery selection -
-Checkout - Online payment - Order confirmation - Order history
+Potential functionality:
+- Browse menu
+- Food categories
+- Food details
+- Shopping cart
+- Customer account
+- Pickup/delivery selection
+- Checkout
+- Online payment
+- Order confirmation
+- Order history
 
 ## Admin
 
-Potential functionality: - Admin login - Dashboard - Manage dishes -
-Manage prices - Manage availability - View orders - Update order
-status - Customer/order information
+Potential functionality:
+- Admin login
+- Dashboard
+- Manage dishes
+- Manage prices
+- Manage availability
+- View orders
+- Update order status
+- Customer/order information
 
 ## Future integrations
 
-Potentially: - Stripe - Email notifications - SMS/WhatsApp
-notifications - Delivery management - Customer database - Analytics
+Potentially:
+- Stripe
+- Email notifications
+- SMS/WhatsApp notifications
+- Delivery management
+- Customer database
+- Analytics
 
 This is a **future phase**, not part of the current basic website build.
 
-------------------------------------------------------------------------
+---
 
-# 18. AI DEVELOPMENT STRATEGY
+# 19. AI DEVELOPMENT STRATEGY
 
 ChatGPT is currently the primary AI development partner.
 
-Use ChatGPT for: - Architecture - Planning - HTML/CSS/JavaScript -
-Debugging - Design decisions - Content - Code review - Explaining
-technical concepts
+Use ChatGPT for:
+- Architecture
+- Planning
+- HTML/CSS/JavaScript
+- Debugging
+- Design decisions
+- Content
+- Code review
+- Explaining technical concepts
 
-Potential future tools: - Lovable --- rapid AI application development -
-Claude / Claude Code --- large-codebase development and coding
-assistance - Replit --- application development and deployment
+Potential future tools:
+- Lovable
+- Claude / Claude Code
+- Replit
 
 Do not add additional tools unless they provide a clear benefit.
 
-------------------------------------------------------------------------
+---
 
-# 19. SOURCE-OF-TRUTH RULE
+# 20. SOURCE-OF-TRUTH RULE
 
 There are three different types of information.
 
@@ -629,9 +610,9 @@ If there is ever a conflict:
 
 **Chat history = development discussion**
 
-------------------------------------------------------------------------
+---
 
-# 20. CHANGE CONTROL
+# 21. CHANGE CONTROL
 
 When something is explicitly approved, mark it:
 
@@ -647,140 +628,100 @@ When something is only an idea:
 
 Do not silently change anything marked LOCKED.
 
-If a new design conflicts with a locked decision, explicitly point out
-the conflict before changing it.
+If a new design conflicts with a locked decision, explicitly point out the conflict before changing it.
 
-------------------------------------------------------------------------
+---
 
-# 21. PROJECT WORKING RULE FOR CHATGPT
+# 22. PROJECT WORKING RULE FOR CHATGPT
 
 When continuing this project, ChatGPT should:
 
-1.  Use this Master Document as the project baseline.
-2.  Respect all LOCKED decisions.
-3.  Avoid reintroducing previously rejected ideas.
-4.  Ask before changing major design decisions.
-5.  Prefer modifying the current code rather than rebuilding
-    unnecessarily.
-6.  When asked for a complete file, provide the complete current version
-    rather than an incomplete fragment.
-7.  Preserve working sections when adding new sections.
-8.  Keep paths consistent.
-9.  Check mobile responsiveness.
+1. Use this Master Document as the project baseline.
+2. Respect all LOCKED decisions.
+3. Avoid reintroducing previously rejected ideas.
+4. Ask before changing major design decisions.
+5. Prefer modifying the current code rather than rebuilding unnecessarily.
+6. When asked for a complete file, provide the complete current version rather than an incomplete fragment.
+7. Preserve working sections when adding new sections.
+8. Keep paths consistent.
+9. Check mobile responsiveness.
 10. Clearly identify what changed.
-11. Update this Master Document when a major project decision becomes
-    locked.
+11. Update this Master Document when a major project decision becomes locked.
+12. Treat GitHub as the authoritative source for the actual website code.
+13. Do not replace the current `mailto:` architecture with a server-side form without explicit approval.
+14. Revisit the Privacy Policy whenever the website begins processing personal data through a new service or backend.
 
-------------------------------------------------------------------------
+---
 
-# 22. VERSION HISTORY
+# 23. VERSION HISTORY
 
-## Version 1.0 --- 2026-08-03
+## Version 1.0 — 2026-08-03
 
 Initial Master Document created.
 
-Locked sections: - Hero - Our Story
+Locked sections:
+- Hero
+- Our Story
 
-Current development: - What We Serve
+Current development:
+- What We Serve
 
-## Version 1.1 --- Our Story refinement
+---
 
-Approved refinement of the Our Story section.
+## Version 1.1 — 2026-08-31
 
-## Revision 6 --- 2026-08-19
+Website functionality and privacy documentation updated.
 
-Current workable visual baseline before Featured Food implementation.
+Completed/approved developments:
+- What We Serve completed.
+- Why Saffron Kettle completed.
+- Featured Food / Menu functionality completed.
+- Contact / Order section completed.
+- Contact form implemented using `mailto:`.
+- No server-side contact-form processing is currently used.
+- No website database stores contact-form submissions.
+- Fallback instructions added for visitors without a configured email application.
+- Current business contact email confirmed as `sudiptaskitchen@outlook.com`.
+- A visible privacy note was added to the Contact section.
+- Dedicated `privacy.html` page created.
+- Privacy Policy documents the current GDPR/privacy approach.
+- Privacy-related requests are directed to `sudiptaskitchen@outlook.com`.
+- Future server-side forms, databases, analytics, ordering systems or other personal-data processing will require a renewed privacy review.
+- Footer/legal links remain subject to final review.
+- Mobile optimization and final production testing remain outstanding.
 
-Locked sections: - Hero - Our Story - What We Serve - Why Saffron Kettle
+---
 
-## Version 1.3 --- 2026-08-20
-
-Featured Food implementation introduced.
-
-Current state: - Three independent featured-food cards - Five rotating
-data entries per card - Five-second independent timers - Independent
-dots - Dish-name/image updates - Fade transition - JSON-driven data
-model - Shared carousel logic
-
-V1.3 remains **IN PROGRESS** until real images are inserted and the
-custom-domain deployment is verified.
-
-# 22B. CURRENT FEATURED FOOD IMPLEMENTATION --- V1.3
-
-**Date:** 2026-08-20
-
-### V1.3 implementation status
-
--   Featured Food section structure implemented.
--   Three cards implemented independently.
--   Five dish entries per card currently used as working data.
--   Carousel changes every 5 seconds.
--   Each card has its own timer and current index.
--   Dot navigation works independently for each card.
--   Dish name and image update together.
--   Fade transition added before and after each update.
--   Carousel data moved toward `data/featured-food.json`.
--   Shared JavaScript logic is used instead of three duplicated carousel
-    logic blocks.
--   Placeholder SVG food images are currently used.
--   Real food photography is still pending.
--   Local testing with the JSON data file requires serving the site
-    through a local web server rather than opening `index.html` directly
-    from `file://`, because browser CORS/security rules block `fetch()`
-    from a local file origin.
-
-### Deployment status
-
-GitHub Pages is configured to build from the `main` branch at repository
-root.
-
-The GitHub Pages `pages build and deployment` workflow has been running
-successfully.
-
-The custom domain `saffronkettle.com` is configured.
-
-**Current action:** verify that the latest V1.3 files and JSON data are
-the version actually being served by the custom domain before declaring
-V1.3 deployed.
-
-### Important maintenance decision
-
-The Featured Food content should be maintained in JSON.
-
-Future dish additions, removals, image-path changes and name changes
-should normally be made in:
-
-`data/featured-food.json`
-
-The JavaScript should remain the reusable carousel engine.
-
-# 23. UPDATE LOG
-
-### 2026-08-19
-
--   Updated the Master Document to reflect the current website state.
--   Marked **What We Serve** as LOCKED.
--   Marked **Why Saffron Kettle** as LOCKED.
--   Confirmed the three Why pillars: Beyond the Familiar, Made with
-    Love, India Undiscovered.
--   Confirmed the approved Why introduction: "Indian food has a bigger
-    story to tell --- beyond the familiar."
--   Confirmed Why Saffron Kettle + Discovery are treated as one cream
-    section.
--   Established Revision 6 as the current workable visual baseline.
--   Set Featured Food / Menu as the current development task.
-
-Use this section for future major changes.
+# 24. UPDATE LOG
 
 ### 2026-08-03
 
--   Created project master document.
--   Hero marked LOCKED.
--   Our Story marked LOCKED.
--   What We Serve identified as the current development task.
--   Confirmed that the website should not restrict the cuisine
-    description to North/South Indian cuisine.
+- Created project master document.
+- Hero marked LOCKED.
+- Our Story marked LOCKED.
+- What We Serve identified as the current development task.
+- Confirmed that the website should not restrict the cuisine description to North/South Indian cuisine.
 
-------------------------------------------------------------------------
+### 2026-08-31
 
-**MASTER DOCUMENT STATUS: ACTIVE --- V1.3 FEATURED FOOD IN PROGRESS**
+- Updated Master Document to reflect current website status.
+- Completed What We Serve.
+- Completed Why Saffron Kettle.
+- Completed Featured Food / Menu functionality.
+- Completed Contact / Order implementation.
+- Selected `mailto:` as the current contact-form architecture.
+- Confirmed that the website does not currently store contact-form submissions on a server or in a website database.
+- Added email-client fallback instructions.
+- Confirmed business contact email as `sudiptaskitchen@outlook.com`.
+- Added a concise privacy note to the Contact section.
+- Created dedicated `privacy.html`.
+- Added GDPR/privacy information to the Privacy Policy.
+- Documented current information-use and retention approach.
+- Documented visitor privacy rights.
+- Established that future backend/data-processing changes require a privacy review.
+- Footer/legal links identified as requiring final review.
+- Mobile optimization and final deployment checks remain outstanding.
+
+---
+
+**MASTER DOCUMENT STATUS: ACTIVE**
