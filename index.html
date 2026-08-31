@@ -740,6 +740,7 @@
                   name="name"
                   placeholder="Your name"
                   autocomplete="name"
+                  required
                 >
 
               </div>
@@ -757,6 +758,7 @@
                   name="email"
                   placeholder="you@example.com"
                   autocomplete="email"
+                  required
                 >
 
               </div>
@@ -792,6 +794,7 @@
                 <select
                   id="contact-enquiry"
                   name="enquiry"
+                  required
                 >
 
                   <option value="">
@@ -836,21 +839,30 @@
                 name="message"
                 rows="5"
                 placeholder="Tell us what you have in mind..."
+                required
               ></textarea>
 
             </div>
 
-
             <button
-              type="button"
+              type="submit"
               class="btn btn-gold contact-submit"
             >
               Send Enquiry
             </button>
 
-
             <p class="contact-form-note">
-              Online ordering will be available soon.
+              Your email application should open automatically.
+              If it doesn't, please email us directly at
+              <a href="mailto:sudiptaskitchen@outlook.com">
+                sudiptaskitchen@outlook.com
+              </a>.
+            </p>
+
+            <p class="contact-form-privacy">
+              <strong>Privacy:</strong>
+              Your details are used only to respond to your enquiry.
+              This website does not store your form submission.
             </p>
 
           </form>
@@ -913,6 +925,10 @@
 
         <a href="#contact">
           Contact
+        </a>
+
+        <a href="privacy.html">
+          Privacy Policy
         </a>
 
       </div>

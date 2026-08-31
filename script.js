@@ -222,3 +222,81 @@ fetch('data/featured-food.json')
     );
 
   });
+
+
+  // =========================================================
+  // CONTACT FORM — MAILTO + VALIDATION
+  // =========================================================
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".contact-form");
+
+    if (!form) return;
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const nameField = document.getElementById("contact-name");
+      const emailField = document.getElementById("contact-email");
+      const phoneField = document.getElementById("contact-phone");
+      const enquiryField = document.getElementById("contact-enquiry");
+      const messageField = document.getElementById("contact-message");
+
+      const name = nameField.value.trim();
+      const email = emailField.value.trim();
+      const phone = phoneField.value.trim();
+      const enquiry = enquiryField.value;
+      const message = messageField.value.trim();
+
+      // Clear previous browser validation messages
+      nameField.setCustomValidity("");
+      emailField.setCustomValidity("");
+      enquiryField.setCustomValidity("");
+      messageField.setCustomValidity("");
+
+      // Required fields
+      if (!name) {
+        nameField.setCustomValidity("Please enter your name.");
+      }
+
+      if (!email) {
+        emailField.setCustomValidity("Please enter your email address.");
+      }
+
+      if (!enquiry) {
+        enquiryField.setCustomValidity("Please choose what you are interested in.");
+      }
+
+      if (!message) {
+        messageField.setCustomValidity("Please enter a message.");
+      }
+
+      // Stop here if validation fails
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const enquiryText =
+        enquiryField.selectedOptions[0]?.text || "";
+
+      const subject =
+        `Saffron Kettle enquiry from ${name}`;
+
+      const body =
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone || "Not provided"}\n` +
+        `Interested in: ${enquiryText}\n\n` +
+        `Message:\n${message}`;
+
+      const mailto =
+        `mailto:sudiptaskitchen@outlook.com` +
+        `?subject=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(body)}`;
+
+      window.location.href = mailto;
+    });
+  });
+
+  
